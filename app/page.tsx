@@ -31,10 +31,10 @@ export default function Home() {
       <Image
         src="https://img.freepik.com/premium-vector/career-development-icons_24911-69064.jpg"
         alt=""
-        layout="fill" // Set layout to 'fill' to maintain the same size and behavior
-        objectFit="cover" // Set objectFit to 'cover' to maintain the same behavior
-        quality={100} // Optionally, set image quality to maximum
-        priority // Optionally, set priority to load the image eagerly
+        layout="fill" 
+        objectFit="cover" 
+        quality={100} 
+        // priority
         style={{ filter: "brightness(50%)" }}
       />
       <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -43,20 +43,20 @@ export default function Home() {
           SwapnaYaan
         </div>
         <div className="mt-4 text-gray-400 z-10">
-          We SwapnaYaan aims to Nourish Young minds and Guide individual to it's
+          We SwapnaYaan aims to Nourish Young minds and Guide individual to it&apos;s
           peek pontentails...
         </div>
         <button
           onClick={googleSignIn}
-          className="flex bg-white border-[2px] z-10 mt-10 border-yellow-500 px-6 py-2 rounded-lg shadow-xl  hover:bg-yellow-300"
+          className="flex bg-white border-[2px] z-10 mt-10 border-yellow-500 px-6 py-2 rounded-lg shadow-xl hover:bg-yellow-300"
         >
           
           <Image
             src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png"
             alt="Google Icon"
-            width={24} // Set the desired width (example: 24px)
-            height={24} // Set the desired height (example: 24px)
-            className="h-6 mx-3" // Apply any additional CSS classes or styles
+            width={24} 
+            height={24} 
+            className="h-6 mx-3" 
           />
           Login with Google
         </button>
