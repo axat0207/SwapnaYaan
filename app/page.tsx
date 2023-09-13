@@ -1,17 +1,16 @@
 // @ts-nocheck
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { auth } from "../firebase";
 import { useRouter } from "next/navigation";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import Image from "next/image";
 
 export default function Home() {
-
   const router = useRouter();
   const [user, setUser] = useState(null);
   const [userImgLink, setUserImgLink] = useState(null);
-  if(user!==null){
+  if (user !== null) {
     router.push("/Dashbord");
   }
 
@@ -26,15 +25,9 @@ export default function Home() {
     setUserImgLink(result.user.photoURL);
   };
 
-
   return (
     <div className="relative h-[100vh]">
-      {/* <img
-        src="https://img.freepik.com/premium-vector/career-development-icons_24911-69064.jpg"
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ filter: "brightness(50%)" }}
-      /> */}
+      
       <Image
         src="https://img.freepik.com/premium-vector/career-development-icons_24911-69064.jpg"
         alt=""
@@ -57,18 +50,14 @@ export default function Home() {
           onClick={googleSignIn}
           className="flex bg-white border-[2px] z-10 mt-10 border-yellow-500 px-6 py-2 rounded-lg shadow-xl  hover:bg-yellow-300"
         >
-          {/* <img
-            className="h-6 mx-3"
+          
+          <Image
             src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png"
-            alt="image"
-          /> */}
-           <Image
-    src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-czn3g8x8.png"
-    alt="Google Icon"
-    width={24} // Set the desired width (example: 24px)
-    height={24} // Set the desired height (example: 24px)
-    className="h-6 mx-3" // Apply any additional CSS classes or styles
-  />
+            alt="Google Icon"
+            width={24} // Set the desired width (example: 24px)
+            height={24} // Set the desired height (example: 24px)
+            className="h-6 mx-3" // Apply any additional CSS classes or styles
+          />
           Login with Google
         </button>
         {user}
